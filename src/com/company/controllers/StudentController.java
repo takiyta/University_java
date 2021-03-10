@@ -10,8 +10,8 @@ public class StudentController {
         this.repo = repo;
     }
 
-    public String createStudent(String name, String grant, int dep_id, int gpa_id) {
-        Student student = new Student(name, grant, dep_id, gpa_id);
+    public String createStudent(String name, String grant, int dep_id) {
+        Student student = new Student(name,grant,dep_id);
 
         boolean created = repo.createStudent(student);
 

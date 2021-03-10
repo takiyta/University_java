@@ -25,7 +25,7 @@ public class StudentRepository implements IStudentRepository {
 
             st.setString(1, student.getName());
             st.setString(2, student.getGrant());
-            st.setInt(3, student.getDep_id);
+            st.setInt(3, student.getDep_id());
 
             boolean executed = st.execute();
             return executed;
