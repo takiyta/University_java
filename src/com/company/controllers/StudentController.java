@@ -18,8 +18,8 @@ public class StudentController {
         return (created ? "Student was created!" : "Student creation was failed!");
     }
 
-    public String getStudent(int id) {
-        Student student = repo.getStudent(id);
+    public String getStudent(int s_id) {
+        Student student = repo.getStudent(s_id);
 
         return (student == null ? "Student was not found!" : student.toString());
     }

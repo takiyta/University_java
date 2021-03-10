@@ -48,7 +48,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT s_id, name,grant,dep_id FROM Student WHERE s_id=?";
+            String sql = "SELECT s_id, name, grant, dep_id FROM Student WHERE s_id=?";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, s_id);
