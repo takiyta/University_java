@@ -25,7 +25,7 @@ public class StudentRepository implements IStudentRepository {
 
             st.setString(1, student.getName());
             st.setString(2, student.getGrant());
-            st.setInt(3, student.getDep_id);
+            st.setInt(3, student.getDep_id());
 
             boolean executed = st.execute();
             return executed;
@@ -48,7 +48,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT s_id,name,grant,dep_id FROM Student WHERE s_id=?";
+            String sql = "SELECT s_id, name,grant,dep_id FROM Student WHERE s_id=?";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, s_id);
@@ -82,7 +82,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT s_id,name,grant,dep_id FROM Student";
+            String sql = "SELECT s_id, name, grant, dep_id FROM Student";
             Statement st = con.createStatement();
 
             ResultSet rs = st.executeQuery(sql);

@@ -15,7 +15,7 @@ public class Department extends University{
         this.dep_name = dep_name;
     }
 
-    public Department(int u_id, String dep_name, int dep_id) {
+    public Department( int dep_id, String dep_name, int u_id) {
         super(u_id);
         this.dep_id = dep_id;
         this.dep_name = dep_name;

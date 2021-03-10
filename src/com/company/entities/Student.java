@@ -5,22 +5,27 @@ public class Student extends Department  { //Create a class student inherited fr
     private String name;
     private String grant; // private = restricted access
 
-    public Student(String name, String grant, int dep_id) { //The default constructor is the no-argument constructor automatically generated
+    public Student( ) { //The default constructor is the no-argument constructor automatically generated
     }
 
-    public Student(int s_id, String grant, String name) { //Creat constructor
+    public Student(int s_id, String name, String grant) { //Creat constructor
         this.s_id = s_id;
         this.grant = grant;
         this.name = name;
     }
 
-    public Student(int s_id, String name, String grant, int dep_id) { //Creat constructor with superclass variable
+    public Student( int s_id, String name, String grant, int dep_id) { //Creat constructor with superclass variable
         super(dep_id);
         this.s_id = s_id;
         this.name = name;
         this.grant = grant;
     }
 
+    public Student(String name, String grant, int dep_id) { //Creat constructor
+        super(dep_id);
+        this.name = name;
+        this.grant = grant;
+    }
 
 
     public int getS_id() {

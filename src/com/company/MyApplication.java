@@ -66,7 +66,7 @@ public class MyApplication {
         System.out.println("Please enter department");
         String dep_id = scanner.next();
 
-        String response = controller.createStudent(name, grant, dep_id);
+        String response = controller.createStudent(name, grant, Integer.parseInt(dep_id));
         System.out.println(response);
     }
 }
