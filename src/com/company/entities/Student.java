@@ -5,7 +5,7 @@ public class Student extends Department  { //Create a class student inherited fr
     private String name;
     private String grant; // private = restricted access
 
-    public Student() { //The default constructor is the no-argument constructor automatically generated
+    public Student(String name, String grant, int dep_id) { //The default constructor is the no-argument constructor automatically generated
     }
 
     public Student(int s_id, String grant, String name) { //Creat constructor
