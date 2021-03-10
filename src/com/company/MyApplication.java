@@ -22,7 +22,7 @@ public class MyApplication {
             System.out.println("2. Get student by id");
             System.out.println("3. Create student");
             System.out.println("0. Exit");
-            System.out.println();
+            System.out.println(); //The text that comes out when you activate the compiler
             try {
                 System.out.print("Enter option (1-3): ");
                 int option = scanner.nextInt();
@@ -33,7 +33,7 @@ public class MyApplication {
                 } else if (option == 3) {
                     createStudentMenu();
                 } else {
-                    break;
+                    break; //Sends us to the method depending on what the user chooses
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
@@ -47,7 +47,7 @@ public class MyApplication {
 
     public void getAllStudentsMenu() {
         String response = controller.getAllStudents();
-        System.out.println(response);
+        System.out.println(response); //Sent us to a method that calls all students
     }
 
     public void getStudentByIdMenu() {
@@ -55,7 +55,7 @@ public class MyApplication {
 
         int id = scanner.nextInt();
         String response = controller.getStudent(id);
-        System.out.println(response);
+        System.out.println(response); //Sent us to a method that displays a student by ID
     }
 
     public void createStudentMenu() {
@@ -64,7 +64,7 @@ public class MyApplication {
         System.out.println("Please enter grant type ");
         String grant = scanner.next();
         System.out.println("Please enter department");
-        String dep_id = scanner.next();
+        String dep_id = scanner.next(); //Sent us to a method that introduces new students
 
         String response = controller.createStudent(name, grant, Integer.parseInt(dep_id));
         System.out.println(response);
