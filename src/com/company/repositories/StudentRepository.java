@@ -2,12 +2,11 @@ package com.company.repositories;
 
 import com.company.data.interfaces.IDB;
 import com.company.entities.Student;
-import com.company.repositories.IStudentRepository;
+import com.company.repositories.interfaces.IStudentRepository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.LinkedList;
 
 public class StudentRepository implements IStudentRepository {
     private final IDB db;
