@@ -1,4 +1,4 @@
-package com.company.entities;
+package com.company.entities; //amina
 
 public class Department extends University{
     private int dep_id;

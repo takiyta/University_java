@@ -1,4 +1,4 @@
-package com.company.entities;
+package com.company.entities; //arai
 
 public class University { //public class in java is a blueprint of objects which specifies properties and methods of objects belonging to that particular class.
     private int u_id;

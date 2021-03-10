@@ -1,4 +1,4 @@
-package com.company.entities;
+package com.company.entities; //arai
 
 public class Student extends Department  { //Create a class student inherited from a department class
     private int s_id;

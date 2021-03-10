@@ -1,4 +1,4 @@
-package com.company.repositories;
+package com.company.repositories; //Alikhan Aras
 
 import com.company.data.interfaces.IDB;
 import com.company.entities.Student;
@@ -20,7 +20,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "INSERT INTO Student(name, grant, dep_id) VALUES (?,?,?)";
+            String sql = "INSERT INTO Student(name, grant1, dep_id) VALUES (?,?,?)";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setString(1, student.getName());
@@ -48,7 +48,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT s_id, name, grant, dep_id FROM Student WHERE s_id=?";
+            String sql = "SELECT  s_id, name, grant1, dep_id FROM Student WHERE s_id=?";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, s_id);
@@ -57,7 +57,7 @@ public class StudentRepository implements IStudentRepository {
             if (rs.next()) {
                 Student student = new Student(rs.getInt("s_id"),
                         rs.getString("name"),
-                        rs.getString("grant"),
+                        rs.getString("grant1"),
                         rs.getInt("dep_id"));
 
 
@@ -82,7 +82,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT s_id, name, grant, dep_id FROM Student";
+            String sql = "SELECT s_id, name, grant1, dep_id FROM student";
             Statement st = con.createStatement();
 
             ResultSet rs = st.executeQuery(sql);
@@ -90,7 +90,7 @@ public class StudentRepository implements IStudentRepository {
             while (rs.next()) {
                 Student student = new Student(rs.getInt("s_id"),
                         rs.getString("name"),
-                        rs.getString("grant"),
+                        rs.getString("grant1"),
                         rs.getInt("dep_id"));
 
 

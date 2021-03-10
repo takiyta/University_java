@@ -1,4 +1,4 @@
-package com.company.controllers;
+package com.company.controllers; //arai
 import com.company.entities.Student;
 import com.company.repositories.interfaces.IStudentRepository;
 import java.util.List; //It declares a Java class to use in the code below the import statement
@@ -25,7 +25,7 @@ public class StudentController {
     }
 
     public String getAllStudents() {
-        List<Student> students = repo.getAllStudents();
+        List<Student>students = repo.getAllStudents();
 
         return students.toString();
     }
