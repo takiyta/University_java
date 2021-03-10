@@ -1,7 +1,7 @@
 package com.company.controllers;
 import com.company.entities.Student;
 import com.company.repositories.interfaces.IStudentRepository;
-import java.util.List;
+import java.util.List; //It declares a Java class to use in the code below the import statement
 
 public class StudentController {
     private final IStudentRepository repo;
