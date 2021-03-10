@@ -64,7 +64,7 @@ public class MyApplication {
         System.out.println("Please enter grant type ");
         String grant = scanner.next();
         System.out.println("Please enter department");
-        String dep_id = scanner.next(); //Sent us to a method that introduces new students
+        String dep_id = scanner.next(); // Sent us to a method that introduces new students
 
         String response = controller.createStudent(name, grant, Integer.parseInt(dep_id));
         System.out.println(response);
