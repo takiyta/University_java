@@ -1,0 +1,2 @@
+# University_java
+This is Student Management System. Users add new students from console into an existing database, enrolling them in the existing courses, and generating unique student IDs. Project includes 3 classes: Student, University, Department. Student class consists of student id, name, department id, grant. Student id is a primary key, while department id is foreign. University class includes university id, u_name, u_email, u_city. Department class consists of department id, department name, university id.
