@@ -27,6 +27,9 @@ public class Student extends Department  { //Create a class student inherited fr
         this.grant = grant;
     }
 
+    public Student(String name) {
+        this.name = name;
+    }
 
     public int getS_id() {
         return s_id;
@@ -47,6 +50,8 @@ public class Student extends Department  { //Create a class student inherited fr
     public String getName() { return name; } //method returns the variable value
 
     public void setName(String name) { this.name = name; } //method sets the value
+
+
 
     @Override
     public String toString() { //method is overridden so that the object values can be returned

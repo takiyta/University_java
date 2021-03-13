@@ -21,10 +21,11 @@ public class MyApplication {
             System.out.println("1. Get all student");
             System.out.println("2. Get student by id");
             System.out.println("3. Create student");
+            System.out.println("4. Get student by name");
             System.out.println("0. Exit");
             System.out.println(); //The text that comes out when you activate the compiler
             try {
-                System.out.print("Enter option (1-3): ");
+                System.out.print("Enter option (1-4): ");
                 int option = scanner.nextInt();
                 if (option == 1) {
                     getAllStudentsMenu();
@@ -32,6 +33,8 @@ public class MyApplication {
                     getStudentByIdMenu();
                 } else if (option == 3) {
                     createStudentMenu();
+                } else if (option == 4) {
+                    getStudentByNameMenu();
                 } else {
                     break; //Sends us to the method depending on what the user chooses
                 }
@@ -68,5 +71,13 @@ public class MyApplication {
 
         String response = controller.createStudent(name, grant, Integer.parseInt(dep_id));
         System.out.println(response);
+    }
+
+    public void getStudentByNameMenu() {
+        System.out.println("Please enter name");
+
+        String name = scanner.next();
+        String response = controller.getStudentByName(name);
+        System.out.println(response); //Sent us to a method that displays a student by name
     }
 }

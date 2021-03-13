@@ -48,7 +48,7 @@ public class StudentRepository implements IStudentRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "SELECT  s_id, name, grant1, dep_id FROM Student WHERE s_id=?";
+            String sql = "SELECT  s_id, name, grant1, dep_id FROM student WHERE s_id=?";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setInt(1, s_id);
@@ -111,4 +111,37 @@ public class StudentRepository implements IStudentRepository {
         }
         return null;
     }
+
+    @Override
+    public Student getStudentByName(String name) {
+        Connection con = null;
+        try {
+            con = db.getConnection();
+            String sql = "SELECT * FROM student WHERE name LIKE '%?%'";
+            PreparedStatement st = con.prepareStatement(sql);
+
+            st.setString(1, name);
+
+            ResultSet rs = st.executeQuery();
+            if (rs.next()) {
+                Student student = new Student(rs.getString("name"));
+
+
+                return student;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+
 }

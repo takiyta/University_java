@@ -2,6 +2,7 @@ package com.company.repositories.interfaces; //Alikhan Aras
 
 import com.company.entities.Student;
 
+import javax.print.DocFlavor;
 import java.util.List;
 
 public interface IStudentRepository {
@@ -11,5 +12,6 @@ public interface IStudentRepository {
 
     List<Student> getAllStudents();
 
+    Student getStudentByName(String name );
 
 }

@@ -29,4 +29,9 @@ public class StudentController {
 
         return students.toString();
     }
+    public String getStudentByName(String name) {
+        Student student = repo.getStudentByName(name);
+
+        return (student == null ? "Student was not found!" : student.toString());
+    }
 }
